@@ -1,8 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
+import constants.KeyHolder;
+import models.Cat;
+import models.Model;
+import registry.Registry;
 
 /**
  *
@@ -15,7 +15,13 @@ public class Main {
      */
     public static void main(String[] args) {
 
-        }
+        Registry.getInstance().set(KeyHolder.cat, new Cat("Lion", 1));
 
+        Object object=Registry.getInstance().get(KeyHolder.cat);
+        
+        if(object instanceof Cat){
+            System.out.println(((Cat)object).getName());
+        }
+    }
 
 }
