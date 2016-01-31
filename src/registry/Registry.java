@@ -11,7 +11,7 @@ public class Registry {
 
     private final HashMap<String, Object> items;
 
-    private static Registry instance = null;
+    private static volatile Registry instance = null;
 
     protected Registry() {
         items=new HashMap<>();
