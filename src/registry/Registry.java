@@ -15,7 +15,6 @@ public class Registry {
 
     protected Registry() {
         items=new HashMap<>();
-        // Exists only to defeat instantiation.
     }
 
     public static Registry getInstance() {
